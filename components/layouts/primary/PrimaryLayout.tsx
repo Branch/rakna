@@ -8,9 +8,8 @@ export interface IPrimaryLayout {
 const PrimaryLayout = ({ children }: IPrimaryLayout) => {
     return (
         <>
-            <Head>
-                <main>{children}</main>
-            </Head>
+            <Head>Layout example</Head>
+            <main>{children}</main>
         </>
     )
 }
