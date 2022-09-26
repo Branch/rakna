@@ -5,13 +5,11 @@ import CatCard from '../components/cards/cat/CatCard'
 import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks'
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout'
 import SidebarLayout from '../components/layouts/sidebar/SidebarLayout'
-
-import styles from '../styles/Home.module.css'
 import { NextPageWithLayout } from './page'
 
 const Home: NextPageWithLayout = () => {
     return (
-        <div className={styles.container}>
+        <div className="flex justify-center flex-col items-center">
             <Head>
                 <title>Create Next App</title>
                 <meta
@@ -21,17 +19,16 @@ const Home: NextPageWithLayout = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>
+            <main>
+                <h1>
                     Welcome to <a href="https://nextjs.org">Next.js!</a>
                 </h1>
 
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.tsx</code>
+                <p>
+                    Get started by editing <code>pages/index.tsx</code>
                 </p>
 
-                <div className={styles.grid}>
+                <div>
                     <CatCard {...mockCatCardProps.base} />
                     <CatCard {...mockCatCardProps.base} />
                     <CatCard {...mockCatCardProps.base} />
@@ -39,14 +36,14 @@ const Home: NextPageWithLayout = () => {
                 </div>
             </main>
 
-            <footer className={styles.footer}>
+            <footer>
                 <a
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Powered by{' '}
-                    <span className={styles.logo}>
+                    <span>
                         <Image
                             src="/vercel.svg"
                             alt="Vercel Logo"
