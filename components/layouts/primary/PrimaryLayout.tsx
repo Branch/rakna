@@ -10,6 +10,9 @@ const PrimaryLayout = ({ children }: IPrimaryLayout) => {
         <>
             <Head>Layout example</Head>
             <main>{children}</main>
+            <footer className="flex items-center justify-center py-16 border-t border-gray-900">
+                Made in 🇸🇪
+            </footer>
         </>
     )
 }
