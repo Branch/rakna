@@ -13,6 +13,19 @@ module.exports = {
             lg: '1200px',
             xl: '1536px',
         },
+        extend: {
+            fontFamily: {
+                Playfair: ['"Playfair Display"', 'serif'],
+            },
+            colors: {
+                smoothYellow: {
+                    50: '#FBF8BE',
+                },
+                solidBlue: {
+                    500: '#234E70',
+                },
+            },
+        },
     },
     plugins: [],
 }
