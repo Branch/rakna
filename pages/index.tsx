@@ -3,15 +3,15 @@ import Image from 'next/image'
 
 import svg from '../assets/images/top-pic.svg'
 
-import CatCard from '../components/cards/cat/CatCard'
-import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks'
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout'
 import SidebarLayout from '../components/layouts/sidebar/SidebarLayout'
 import { NextPageWithLayout } from './page'
+import Calculator from '../components/features/calculator/Calculator'
+import { mockCalculatorProps } from '../components/features/calculator/Calculator.mocks'
 
 const Home: NextPageWithLayout = () => {
     return (
-        <div className="">
+        <div>
             <Head>
                 <title>Räkna på bolån</title>
                 <meta name="description" content="Räkna på bolån" />
@@ -37,13 +37,7 @@ const Home: NextPageWithLayout = () => {
                     </div>
                 </div>
             </div>
-
-            <div>
-                <CatCard {...mockCatCardProps.base} />
-                <CatCard {...mockCatCardProps.base} />
-                <CatCard {...mockCatCardProps.base} />
-                <CatCard {...mockCatCardProps.base} />
-            </div>
+            <Calculator {...mockCalculatorProps.base} />
         </div>
     )
 }
