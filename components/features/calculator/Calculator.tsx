@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Slider from 'react-input-slider'
 
 import CalculatorGroup from '../../inputs/CalculatorGroup'
@@ -26,7 +26,7 @@ const Calculator = ({ xWorth, xInterest, xLoan }: ICalculator) => {
     // sumWithoutTax is the sum excluding the deductible tax
     const [sumWithoutTax, setsumWithoutTax] = useState(0)
 
-    const calcSum = () => {
+    const calcSum = useCallback(() => {
         const interestCost = state.xValues.loan * (state.xValues.interest / 100)
 
         const interestCostMonthly =
@@ -49,15 +49,15 @@ const Calculator = ({ xWorth, xInterest, xLoan }: ICalculator) => {
         setsumWithoutTax(deductibleTax)
 
         return Math.round(interestCostMonthly + amortizationCostMonthly)
-    }
-
-    useEffect(() => {
-        setSum(calcSum())
     }, [state])
 
     useEffect(() => {
         setSum(calcSum())
-    }, [])
+    }, [state, calcSum])
+
+    useEffect(() => {
+        setSum(calcSum())
+    }, [calcSum])
 
     return (
         <CalculatorGroup>
