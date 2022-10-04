@@ -22,6 +22,7 @@ module.exports = {
                     50: '#FBF8BE',
                 },
                 solidBlue: {
+                    50: '#dfebf5',
                     500: '#234E70',
                 },
             },
