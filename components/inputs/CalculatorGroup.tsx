@@ -6,7 +6,7 @@ export interface ICalculatorGroup {
 
 const CalculatorGroup = ({ children }: ICalculatorGroup) => {
     return (
-        <div className="flex flex-col items-center gap-4 py-14 justify-center">
+        <div className="flex items-center py-14 justify-center bg-solidBlue-50">
             {children}
         </div>
     )
